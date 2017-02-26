@@ -1,14 +1,21 @@
-import thunk from 'redux-thunk';
+import logger from 'redux-logger';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
+import thunkMiddleware from 'redux-thunk';
+const loggerMiddleware = logger();
 
+// reducers
+import postsBySubreddit from '../reducers/postsBySubreddit';
+import selectedSubreddit from '../reducers/selectedSubreddit';
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+  postsBySubreddit,
+  selectedSubreddit
 });
 
 const store = createStore(
   rootReducer,
-  applyMiddleware(thunk)
+  applyMiddleware(thunkMiddleware, loggerMiddleware)
 );
+
 
 export default store;
