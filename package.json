@@ -1,9 +1,9 @@
 {
-  "name": "todo-app",
+  "name": "reddit-scraper",
   "version": "1.0.0",
   "description": "Simple starter package for Redux with React and Babel support",
   "main": "index.js",
-  "repository": "https://github.com/parkedwards/todolist.git",
+  "repository": "https://github.com/parkedwards/reddit-scraper.git",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.1.18",
+    "isomorphic-fetch": "^2.2.1",
     "lodash": "^3.10.1",
     "material-ui": "^0.16.7",
     "react": "^0.14.3",
@@ -34,6 +35,7 @@
     "react-redux": "^4.0.0",
     "react-router": "^2.0.1",
     "redux": "^3.0.4",
+    "redux-logger": "^2.8.1",
     "redux-thunk": "^2.2.0"
   }
 }
