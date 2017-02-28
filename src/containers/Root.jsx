@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { Provider } from 'react-redux';
-import App from '../components/App';
+import App from './App';
 
 const Root = ({ store }) => {
   return (
@@ -10,4 +10,4 @@ const Root = ({ store }) => {
   )
 }
 
-export default Root;
+export default Root;3
