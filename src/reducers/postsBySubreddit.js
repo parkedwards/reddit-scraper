@@ -1,11 +1,13 @@
 import * as types from '../actions/ActionTypes';
 
-// helper function
-const posts = (state = {
+const initialPostState = {
   isFetching: false,
   didInvalidate: false,
   items: []
-}, action) => {
+};
+
+// helper function
+const posts = (state = initialPostState, action) => {
   switch (action.type) {
     case types.INVALIDATE_SUBREDDIT:
       return Object.assign({}, state, {
