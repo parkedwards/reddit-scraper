@@ -10,4 +10,4 @@ const Root = ({ store }) => {
   )
 }
 
-export default Root;3
+export default Root;
