@@ -1,7 +1,7 @@
 {
   "name": "reddit-scraper",
   "version": "1.0.0",
-  "description": "Simple starter package for Redux with React and Babel support",
+  "description": "A simple Reddis scraper built with React + Redux",
   "main": "index.js",
   "repository": "https://github.com/parkedwards/reddit-scraper.git",
   "scripts": {
