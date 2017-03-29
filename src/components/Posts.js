@@ -1,10 +1,11 @@
 import React from 'react';
+import {List, ListItem} from 'material-ui/List';
 
 const Posts = ({ posts }) => {
   return (
-    <ul>
-      {posts.map((post, i) => <li key={i}><a href={post.url}>{post.title}</a></li>)}
-    </ul>
+    <List
+      children={posts.map((post, i) => <a href={post.url}><ListItem key={i} primaryText={post.title} /></a>)}
+    />
   );
 };
 
