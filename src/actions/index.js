@@ -3,7 +3,6 @@ import fetch from 'isomorphic-fetch';
 
 
 export const selectSubreddit = (subreddit) => {
-  console.log('SELECTED SUBREDDIT ==============');
   return {
     type: types.SELECT_SUBREDDIT,
     subreddit
@@ -11,7 +10,6 @@ export const selectSubreddit = (subreddit) => {
 };
 
 export const invalidateSubreddit = (subreddit) => {
-  console.log('INVALIDATE SUBREDDIT ==============');
   return {
     type: types.INVALIDATE_SUBREDDIT,
     subreddit
@@ -19,7 +17,6 @@ export const invalidateSubreddit = (subreddit) => {
 };
 
 export const requestPosts = (subreddit) => {
-  console.log('REQUEST POSTS ==============');
   return {
     type: types.REQUEST_POSTS,
     subreddit
@@ -27,7 +24,6 @@ export const requestPosts = (subreddit) => {
 }
 
 export const receivePosts = (subreddit, json) => {
-  console.log('RECEIVE POSTS ==============');
   return {
     type: types.RECEIVE_POSTS,
     subreddit,
@@ -78,7 +74,6 @@ const shouldFetchPosts = (state, subreddit) => {
 
 // another THUNK function:
 export const fetchPostsIfNeeded = (subreddit) => {
-  console.log('FETCH POSTS IF NEEDED ==============');
   
   return (dispatch, getState) => { // 2nd thunk arg is getState, which gets the current state
     if (shouldFetchPosts(getState(), subreddit)) { // check if state has data in store
