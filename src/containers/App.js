@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import RefreshIndicator from 'material-ui/RefreshIndicator';
+
 import { selectSubreddit, fetchPostsIfNeeded, invalidateSubreddit } from '../actions/index';
 
 // import nested components here
@@ -64,7 +66,18 @@ class App extends Component {
         </p>
 
         {isFetching && posts.length === 0 &&
-          <h2>Loading...</h2>
+          // <h2>Loading...</h2>
+          <RefreshIndicator
+            loadingColor="#cee3f8"
+            size={40}
+            left={10}
+            top={0}
+            status="loading"
+            style={{
+              display: 'inline-block',
+              position: 'relative',
+            }}
+          />
         }
 
         {!isFetching && posts.length === 0 &&
